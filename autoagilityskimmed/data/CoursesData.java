@@ -3,24 +3,24 @@ package autoagilityskimmed.data;
 public enum CoursesData {
     GNOME_BASIC("Gnome Basic Course", 1, true, false);
 
-    final String courseName;
-    final int courseLevelRequirement;
+    final String name;
+    final int levelRequirement;
     final boolean courseEnabled, foodEnabled;
 
-    private CoursesData(final String courseName, final int courseLevelRequirement,
+    private CoursesData(final String name, final int levelRequirement,
                         final boolean courseEnabled, final boolean foodEnabled) {
-        this.courseLevelRequirement = courseLevelRequirement;
-        this.courseName = courseName;
+        this.levelRequirement = levelRequirement;
+        this.name = name;
         this.courseEnabled = courseEnabled;
         this.foodEnabled = foodEnabled;
     }
 
-    public String getCourseName() {
-        return courseName;
+    public String getName() {
+        return name;
     }
 
-    public int getCourseLevelRequirement() {
-        return courseLevelRequirement;
+    public int getLevelRequirement() {
+        return levelRequirement;
     }
 
     public boolean isCourseEnabled() {
@@ -33,6 +33,6 @@ public enum CoursesData {
 
     @Override
     public String toString() {
-        return "Level: " + getCourseLevelRequirement() + "  -  " + getCourseName();
+        return "Level: " + getLevelRequirement() + "  -  " + getName();
     }
 }

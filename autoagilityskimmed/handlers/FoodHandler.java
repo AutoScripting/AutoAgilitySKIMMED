@@ -20,11 +20,11 @@ public class FoodHandler extends Task {
         final int maxHealth = Integer.parseInt(strArray[1]);
         return ((currentHealth * 2) < maxHealth)
                 && ctx.hud.view(Hud.Window.BACKPACK)
-                && !ctx.backpack.select().id(foodData.getFoodId()).isEmpty();
+                && !ctx.backpack.select().id(foodData.getId()).isEmpty();
     }
 
     @Override
     public void execute() {
-        ctx.backpack.select().id(foodData.getFoodId()).first().poll().interact("Eat");
+        ctx.backpack.select().id(foodData.getId()).first().poll().interact("Eat");
     }
 }

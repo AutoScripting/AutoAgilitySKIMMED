@@ -7,7 +7,7 @@ import org.powerbot.script.wrappers.GameObject;
 import org.powerbot.script.wrappers.Tile;
 
 public class GnomeBasic extends Task {
-    public enum Obstacles {
+    private enum Obstacles {
         LOG_BALANCE("Log balance", 69526, new Area(
                 new Tile(2467, 3441, 0),
                 new Tile(2467, 3435, 0),
